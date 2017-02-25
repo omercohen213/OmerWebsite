@@ -1,0 +1,154 @@
+﻿*{
+ margin:0;
+ padding:0;
+}
+
+form {
+    margin-top:5%;
+    
+}
+
+fieldset{
+  background: linear-gradient(#61ede3 , white);
+}
+
+#fieldset1 /*(Login)*/ {   
+    padding: 20px, 20px 0 20px;
+    width:30%;
+}
+
+#fieldset1 td {
+  color: Black;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#fieldset1 input {
+  background: White;
+  border: 1px solid #c6c7cc;
+  color: #636466;
+  padding: 6px;
+  margin-top: 6px; 
+}
+
+#fieldset2 { /*(Login)*/
+  border-top: 1px solid #c6c7cc;
+  padding: 20px;
+  width:27.5%;
+}
+ 
+ .btn {
+  background: linear-gradient(#61ede3 , white); 
+  border: 0;
+  color:Black;
+  cursor: pointer;
+  font-weight: bold;
+  float: left;
+  padding: 8px 16px;
+}
+
+#fieldset2 td {
+  color: Black;
+  font-size: 12px;
+  float:left;
+  margin: 10px 0 0 20px;
+}
+
+.sidemenu {
+    width:11%;
+    background-color: gray; 
+    height:100%;
+} 
+ 
+.sidemenu ul {
+  padding-left:0px;       
+}
+
+.sidemenu ul li {
+  border-bottom:1px solid black;
+  padding:20px;
+  display: block;
+  list-style-type: none;
+}
+
+.sidemenu ul li a {    
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.sidemenu ul li:hover {
+    background-color: #555;   
+}
+
+body {
+   background-image:url("../Images/LachinioBackgroundImage.png");
+   background-repeat:no-repeat;
+   background-attachment:fixed;
+   background-position:center;
+   background-size: cover;     
+}
+
+url {
+    z-index:-1;
+ }
+.topmenu {
+   margin:0 auto;
+}
+
+ .topmenu ul {
+    list-style-type:none;
+    overflow: hidden;
+    background-color: #333;     
+ }
+ 
+ .topmenu ul li {
+    float: left;
+    width:15%;
+}
+
+.topmenu ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topmenu ul li a:hover {
+    background-color: #111;
+}
+.div1 /*(Register,Login)*/ {
+    background: linear-gradient(#61ede3 , white);
+    margin-top:5%;
+    width:40%;
+    font-size:20px;
+}
+
+.images { 
+    width:150px;
+    height:150px;
+    vertical-align:top;
+    margin-right:50px;
+}
+
+.fieldset3 /*(Register)*/ {
+    margin-top:5%;
+    width:60%;
+    padding:50px;
+    
+}
+
+#td1 /*(Register)*/ {
+    vertical-align:top;
+}
+#maindiv{
+    background: linear-gradient(#61ede3 , white);
+    margin-top: 10%;
+    height: 25px;
+}
+.maindiv2{
+    background: linear-gradient(#61ede3 , white);
+    height: 25px;
+}

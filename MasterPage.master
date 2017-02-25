@@ -1,0 +1,103 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript">
+    function isValidEmail(email_str) {
+
+        if (email_str == "") {
+            return false;
+        }
+
+        if (email_str.indexOf("@") < 1) {
+            return false;
+        }
+
+
+        if (email_str.split("@").length != 2) {
+            return false;
+        }
+
+        if (!((email_str.lastIndexOf(".") == email_str.length - 3) || (email_str.lastIndexOf(".") == email_str.length - 4))) {
+            return false;
+        }
+
+        if (email_str.indexOf(".") == 0) {
+            return false;
+        }
+
+        var res = isValidString(email_str);
+        if (res == false) {
+            return false;
+        }
+        return true;
+    }
+    function checkEmail() {
+        var element = document.getElementById("email");
+        var email_str = element.value;
+        if (isValidEmail(email_str) == false) {
+            document.getElementById("email_error").innerHTML = "כתובת מייל לא חוקית";
+        } else {
+            document.getElementById("email_error").innerHTML = "";
+        }
+    }
+
+    function isValidString(checked_str) {
+
+        var badCharStr = "$%^*()_+[]{}<>&";
+        var apostrophe = "\"";
+        pos = checked_str.indexOf(apostrophe);
+        if (pos > -1) {
+            return false;
+        }
+        for (var i = 0; i < badCharStr.length; i++) {
+            badChr = badCharStr.charAt(i)
+            pos = checked_str.indexOf(badChr);
+            if (pos > -1) {
+                return false;
+            }
+        }
+        return true;
+    }
+    function isValidPhone(str) {
+        for (i = 0; i < str.length; i++) {
+            ch = str.charAt(i)
+            if (!(ch >= "0" && ch <= "9") || (ch == "-")) {
+                return false;
+            }
+        }
+    }
+    function checkinput(check, eror) {
+        counter = 0;
+        check = 0;
+        length = check.lenght;
+        for (i = 1; i <= length; i++)
+            if (check[i].checked == true)
+                counter++
+        if (counter == 0)
+            eror.innerHTML = "לא נבחרה אף תיבת סימון";
+        else eror.innerHTML = "";
+    }
+    </script>
+    <link rel="Stylesheet" type="text/css" href="css/StyleSheet.css" />
+    <asp:ContentPlaceHolder id="head" runat="server">   
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<div class="topmenu">
+    <ul>
+       <li><a class="active" href="Default.aspx">Home</a></li>
+       <li><a href="Login.aspx">Login</a></li>
+       <li><a href="Register.aspx">Register</a></li>
+       <li><a href="Questionnaire.aspx">Questionnaire</a></li>
+       <li><a href="Gallery.aspx">Gallery</a></li>
+       <li><a href="AboutMe.aspx">About Me</a></li>
+    </ul>
+</div>   
+    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>
