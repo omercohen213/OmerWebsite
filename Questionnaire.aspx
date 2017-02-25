@@ -10,13 +10,13 @@
         <fieldset class="fieldset3">
          <table>
             <tr >         
-               <td class="style1">1. What was the name of the previous game in Rocket League series?</td>
-               <td class="style1"><input type="text" name="PreviousName" value="" size="15"/><div class="div1">Answer the questions:</div>
+               <td>1. What was the name of the previous game in Rocket League series?</td>
+               <td><input type="text" name="PreviousName" value="" size="15"/><div class="div1">Answer the questions:</div>
                 </td>
             </tr>
             <tr>
-                <td class="style2">2. Which company has developed and published this game?</td>   
-                <td class="style2"><input type="text" name="company" value="" size="15"/></td>
+                <td>2. Which company has developed and published this game?</td>   
+                <td><input type="text" name="company" value="" size="15"/></td>
             </tr>
             <tr>
                 <td>3. Which car do professional players usually play with?</td>
