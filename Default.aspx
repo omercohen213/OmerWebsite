@@ -8,7 +8,7 @@
                <h1 id="marquee"> <%=mymassege%></h1>
         </div>
          <div class="maindiv2" style="overflow: hidden">
-               <h1 id="marquee1"> In this web site you can find information about the game Rocket League and some other stuff.</h1>
+               <h1 id="marquee1"> In this website you can find information about Rocket League and some other stuff.</h1>
         </div>
          <div class="maindiv2" style="overflow: hidden">
              <h1 id="marquee2">Have fun!</h1>

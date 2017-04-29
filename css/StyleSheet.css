@@ -262,3 +262,17 @@ url {
     background: linear-gradient(rgba(109, 109, 109,0.5) , rgba(255, 255, 255, 0.5));
     margin-top: 10px;
 }
+
+.SurveyDiv
+{
+    margin-top: 10px;
+    width:40%;
+    height:auto;
+    background: linear-gradient(rgba(109, 109, 109,0.5) , rgba(255, 255, 255, 0.5));
+}
+#SurveyResetDiv
+{
+    background: linear-gradient(rgba(109, 109, 109,0.5) , rgba(255, 255, 255, 0.5));
+    width:35%;
+    font-size:20px;   
+}

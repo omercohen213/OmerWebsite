@@ -7,9 +7,9 @@
         // Code that runs on application startup
         Application["userCounter"] = 0;
 
-        Application["asm"] = 0;
-        Application["c"] = 0;
-        Application["internet"] = 0;
+        Application["Octane"] = 0;
+        Application["Dominus"] = 0;
+        Application["Batmobile"] = 0;
         Application["other"] = 0;
     }
     
@@ -33,7 +33,7 @@
         Application.UnLock();
         
         
-        
+        Session["surveyreset"] = false;
         Session["email"] = null;
         Session["user"] = null;
         Session["vote"] = "no";

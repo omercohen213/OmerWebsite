@@ -192,15 +192,17 @@
         
        <%if ((string)Session["user"] == "Admin")
          {%>        
-            <li><a href="DBtable.aspx">Database Table</a></li>  
+            <li><a href="DBtable.aspx">Database Table</a></li> 
+            <li><a href="Survey.aspx">Survey</a></li> 
             <li><a href="Logout.aspx">Log out </a></li>   
        <%} %>   
          
        <%else if (Session["user"] != null)
-          {%>
+          {%> 
+            <li><a href="Survey.aspx">Survey</a></li>          
             <li><a href="Logout.aspx">Log out </a></li>   
             <li><a href="EditUser.aspx?email=<%=Session["email"]%>">Edit User</a></li>
-            <li><a href="Survey.aspx">Survey</a></li>
+            
             <%} %>
     </ul>
 </div>
