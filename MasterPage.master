@@ -6,81 +6,165 @@
 <head runat="server">
     <title></title>
     <script type="text/javascript">
-    function isValidEmail(email_str) {
+  
+        function checkInputpass(element_checked, element_error) {
+            var pas1 = element_checked;
+            var error = element_error;
+            var pass = false;
+            var pas = pas1.value;
+            var sif = false;
+            var digit = false;
+            for (var i = 0; i < pas.length; i++) {
+                if ((pas[i] >= 'a' && pas[i] <= 'z' || pas[i] >= 'A'
+&& pas[i] <= 'Z') && !sif)
+                    sif = true;
+                if ((pas[i] >= '0' && pas[i] <= '9') && !digit)
+                    digit = true;
+            }
+            if (pas1.value == "") {
+                pas1.style.backgroundColor = 'red';
+                error.innerHTML = "Enter password";
+                return false;
+            }
+            else if (pas1.value.length > 10 || pas1.value.length < 5) {
+                pas1.style.backgroundColor = 'red';
+                error.innerHTML = "Password  must be between 5 and 10 characters.";
+                return false;
+            }
+            else if (!digit) {
+                pas1.style.backgroundColor = 'red';
+                error.innerHTML = "Password must have at least one number.";
+                return false;
+            }
+            else if (!sif) {
+                pas1.style.backgroundColor = 'red';
+                error.innerHTML = "Password must have at least one letter.";
+                return false;
+            }
+            else {
+                pas1.style.backgroundColor = "";
+                error.innerHTML = "";
+                pass = true;
+                return true;
+            }
+        }
+        function isValidEmail(element_email, element_error) {
+            str = element_email.value;
+            if (str == "") {
+                element_email.style.backgroundColor = "Red";
+                element_error.innerHTML = "Enter email address.";
+                return false;
+            }
 
-        if (email_str == "") {
-            return false;
+            if (str.indexOf("@") < 1) {
+                element_email.style.backgroundColor = "Red";
+                element_error.innerHTML = "Invalid email.";
+                return false;
+            }
+
+
+            if (str.split("@").length != 2) {
+                element_email.style.backgroundColor = "Red";
+                element_error.innerHTML = "The @ sign cannot exist more than once or zero times.";
+                return false;
+            }
+
+            if (!((str.lastIndexOf(".") == str.length - 3) || (str.lastIndexOf(".") == str.length - 4))) {
+                element_email.style.backgroundColor = "Red";
+                element_error.innerHTML = "A point must be located in 2 or 3 characters from the email terminal.";
+                return false;
+            }
+
+            if (str.indexOf(".") == 0) {
+                element_email.style.backgroundColor = "Red";
+                element_error.innerHTML = "The email cannot begin with a period.";
+                return false;
+            }
+
+            var res = isValidString(element_email, element_error); //בדיקה האם קיימים תווים לא חוקיים באימייל
+            if (res == false) {
+                element_email.style.backgroundColor = "Red";
+                element_error.innerHTML = "Invaild characters.";
+                return false;
+            }
+
+            return true;
+        }
+        function isValidEmail(email_str) {
+
+            if (email_str == "") {
+                return false;
+            }
+
+            if (email_str.indexOf("@") < 1) {
+                return false;
+            }
+
+
+            if (email_str.split("@").length != 2) {
+                return false;
+            }
+
+            if (!((email_str.lastIndexOf(".") == email_str.length - 3) || (email_str.lastIndexOf(".") == email_str.length - 4))) {
+                return false;
+            }
+
+            if (email_str.indexOf(".") == 0) {
+                return false;
+            }
+
+            var res = isValidString(email_str);
+            if (res == false) {
+                return false;
+            }
+            return true;
+        }
+        function checkEmail() {
+            var element = document.getElementById("email");
+            var email_str = element.value;
+            if (isValidEmail(email_str) == false) {
+                document.getElementById("email_error").innerHTML = "Invalid email";
+            } else {
+                document.getElementById("email_error").innerHTML = "";
+            }
         }
 
-        if (email_str.indexOf("@") < 1) {
-            return false;
-        }
+        function isValidString(checked_str) {
 
-
-        if (email_str.split("@").length != 2) {
-            return false;
-        }
-
-        if (!((email_str.lastIndexOf(".") == email_str.length - 3) || (email_str.lastIndexOf(".") == email_str.length - 4))) {
-            return false;
-        }
-
-        if (email_str.indexOf(".") == 0) {
-            return false;
-        }
-
-        var res = isValidString(email_str);
-        if (res == false) {
-            return false;
-        }
-        return true;
-    }
-    function checkEmail() {
-        var element = document.getElementById("email");
-        var email_str = element.value;
-        if (isValidEmail(email_str) == false) {
-            document.getElementById("email_error").innerHTML = "כתובת מייל לא חוקית";
-        } else {
-            document.getElementById("email_error").innerHTML = "";
-        }
-    }
-
-    function isValidString(checked_str) {
-
-        var badCharStr = "$%^*()_+[]{}<>&";
-        var apostrophe = "\"";
-        pos = checked_str.indexOf(apostrophe);
-        if (pos > -1) {
-            return false;
-        }
-        for (var i = 0; i < badCharStr.length; i++) {
-            badChr = badCharStr.charAt(i)
-            pos = checked_str.indexOf(badChr);
+            var badCharStr = "$%^*()_+[]{}<>&";
+            var apostrophe = "\"";
+            pos = checked_str.indexOf(apostrophe);
             if (pos > -1) {
                 return false;
             }
+            for (var i = 0; i < badCharStr.length; i++) {
+                badChr = badCharStr.charAt(i)
+                pos = checked_str.indexOf(badChr);
+                if (pos > -1) {
+                    return false;
+                }
+            }
+            return true;
         }
-        return true;
-    }
-    function isValidPhone(str) {
-        for (i = 0; i < str.length; i++) {
-            ch = str.charAt(i)
-            if (!(ch >= "0" && ch <= "9") || (ch == "-")) {
-                return false;
+        function isValidPhone(str) {
+            for (i = 0; i < str.length; i++) {
+                ch = str.charAt(i)
+                if (!(ch >= "0" && ch <= "9") || (ch == "-")) {
+                    return false;
+                }
             }
         }
-    }
-    function checkinput(check, eror) {
-        counter = 0;
-        check = 0;
-        length = check.lenght;
-        for (i = 1; i <= length; i++)
-            if (check[i].checked == true)
-                counter++
-        if (counter == 0)
-            eror.innerHTML = "לא נבחרה אף תיבת סימון";
-        else eror.innerHTML = "";
-    }
+        function checkinput(check, eror) {
+            counter = 0;
+            check = 0;
+            length = check.lenght;
+            for (i = 1; i <= length; i++)
+                if (check[i].checked == true)
+                    counter++
+            if (counter == 0)
+                eror.innerHTML = "No checkbox selected";
+            else eror.innerHTML = "";
+        }
     </script>
     <link rel="Stylesheet" type="text/css" href="css/StyleSheet.css" />
     <asp:ContentPlaceHolder id="head" runat="server">   
@@ -90,14 +174,40 @@
 <div class="topmenu">
     <ul>
        <li><a class="active" href="Default.aspx">Home</a></li>
+       <% if (Session["user"] == null)
+          {%>             
        <li><a href="Login.aspx">Login</a></li>
        <li><a href="Register.aspx">Register</a></li>
+       <%} %>
+
        <li><a href="Questionnaire.aspx">Questionnaire</a></li>
-       <li><a href="Gallery.aspx">Gallery</a></li>
-       <li><a href="AboutMe.aspx">About Me</a></li>
+       <li class="dropdown"><a href="AboutTheGame.aspx">About The Game</a>        
+        <div class="dropdown-content">
+            <a href="Online.aspx">Online</a>
+            <a href="Garage.aspx">Garage</a>
+            <a href="Articles.aspx">Articles</a>
+            <a href="Discussions.aspx">Discussions</a>
+        </div></li>   
+     
+        
+       <%if ((string)Session["user"] == "Admin")
+         {%>        
+            <li><a href="DBtable.aspx">Database Table</a></li>  
+            <li><a href="Logout.aspx">Log out </a></li>   
+       <%} %>   
+         
+       <%else if (Session["user"] != null)
+          {%>
+            <li><a href="Logout.aspx">Log out </a></li>   
+            <li><a href="EditUser.aspx?email=<%=Session["email"]%>">Edit User</a></li>
+            <li><a href="Survey.aspx">Survey</a></li>
+            <%} %>
     </ul>
-</div>   
+</div>
     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
     </asp:ContentPlaceHolder>
+    <center>
+    <div class="div1" style="color:Red">Number of visitors:<%=Application["userCounter"]%></div>
+    </center>
 </body>
 </html>

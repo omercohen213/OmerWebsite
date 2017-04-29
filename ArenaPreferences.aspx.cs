@@ -5,12 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class MasterPage : System.Web.UI.MasterPage
+public partial class ArenaPreferences : System.Web.UI.Page
 {
-    public string hrefStr = "";
     protected void Page_Load(object sender, EventArgs e)
     {
-        hrefStr = "EditUser.aspx?email=" + Session["email"];
-        
+
     }
 }

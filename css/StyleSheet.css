@@ -9,7 +9,7 @@ form {
 }
 
 fieldset{
-  background: linear-gradient(#61ede3 , white);
+  background: linear-gradient(#6d6d6d , white);
 }
 
 #fieldset1 /*(Login)*/ {   
@@ -23,7 +23,6 @@ fieldset{
   font-weight: bold;
   margin-bottom: 20px;
 }
-
 #fieldset1 input {
   background: White;
   border: 1px solid #c6c7cc;
@@ -39,26 +38,33 @@ fieldset{
 }
  
  .btn {
-  background: linear-gradient(#61ede3 , white); 
+  background: linear-gradient(#6d6d6d , white); 
   border: 0;
   color:Black;
   cursor: pointer;
   font-weight: bold;
-  float: left;
+  
   padding: 8px 16px;
 }
 
-#fieldset2 td {
+.fieldset2 td {
   color: Black;
   font-size: 12px;
   float:left;
   margin: 10px 0 0 20px;
 }
 
+.users_cell {
+     border: 1px solid olive;
+     padding: 15px;
+     color: black;
+}
+
 .sidemenu {
     width:11%;
     background-color: gray; 
     height:100%;
+    position:fixed;
 } 
  
 .sidemenu ul {
@@ -83,7 +89,7 @@ fieldset{
 }
 
 body {
-   background-image:url("../Images/LachinioBackgroundImage.png");
+   background-image:url("../Images/Background.jpg");
    background-repeat:no-repeat;
    background-attachment:fixed;
    background-position:center;
@@ -105,7 +111,7 @@ url {
  
  .topmenu ul li {
     float: left;
-    width:15%;
+    width:14%;
 }
 
 .topmenu ul li a {
@@ -119,10 +125,17 @@ url {
 .topmenu ul li a:hover {
     background-color: #111;
 }
-.div1 /*(Register,Login)*/ {
-    background: linear-gradient(#61ede3 , white);
+#div1
+{
+    background: linear-gradient(#6d6d6d , white);
+    margin-top:15px;
+    width:35%;
+}
+    
+.div1 /*(Register,Login,AboutTheGame (and its sub menu))*/ {
+    background: linear-gradient(#6d6d6d , white);
     margin-top:5%;
-    width:40%;
+    width:35%;
     font-size:20px;
 }
 
@@ -141,14 +154,156 @@ url {
 }
 
 #td1 /*(Register)*/ {
-    vertical-align:top;
+    vertical-align:top;  
+}
+#CompetetiveDiv1
+{
+    background: linear-gradient(#6d6d6d , white);
+    margin-top: 10px;
+    height: 50px;
+}
+#CompetetiveDiv2
+{
+    background: linear-gradient(#6d6d6d , white);
+    margin-top: 10px;
+    height: 110px;
+}
+#CompetetiveDiv3
+{
+    background: linear-gradient(#6d6d6d , white);
+    margin-top: 10px;
+    height: 30px;
+}
+#CompetetiveDiv4
+{
+    background: linear-gradient(#6d6d6d , white);
+    margin-top: 10px;
+    height: 50px;
+}
+#CompetetiveDiv5
+{
+    background: linear-gradient(#6d6d6d , white);
+    margin-top: 10px;
+    height: 50px;
+}
+#CompetetiveDiv6
+{
+    background: linear-gradient(#6d6d6d , white);
+    margin-top: 10px;
+    height: 55px;
+}
+#CompetetiveDiv7
+{
+    background: linear-gradient(#6d6d6d , white);
+    margin-top: 10px;
+    height: 550px;
+}
+#CompetetiveDiv8
+{
+    background: linear-gradient(#6d6d6d , white);
+    margin-top: 10px;
+    height: 60px;
+}
+
+#OnlineDiv1
+{
+    background: linear-gradient(#6d6d6d , white);
+    margin-top: 10px;
+    height: 200px;
+    width:80%;
+    margin-left:100px;
+}
+#OnlineDiv2
+{
+    background: linear-gradient(#6d6d6d , white);
+    margin-top: 10px;
+    height: 250px;
+    width:80%;
+    margin-left:100px;
 }
 #maindiv{
-    background: linear-gradient(#61ede3 , white);
+    background: linear-gradient(#6d6d6d , white);
     margin-top: 10%;
-    height: 25px;
+    height: 45px;
 }
 .maindiv2{
-    background: linear-gradient(#61ede3 , white);
-    height: 25px;
+    background: linear-gradient(#6d6d6d , white);
+    height: 45px;
+}
+
+#marquee{
+ animation:marquee 1s ease-out;
+}
+@keyframes marquee{
+0%   { 
+ transform: translateX(100%); 		
+ }
+ 100% { 
+ transform: translateX(0%); 
+ }
+}
+#marquee1{
+ animation: marquee1 2.5s ease-out;
+}
+@keyframes marquee1 {
+0%   { 
+ transform: translateX(100%); 		
+ }
+ 100% { 
+ transform: translateX(0%); 
+ }
+}
+#marquee2 {
+ animation: marquee2 4s ease-out;
+}
+@keyframes marquee2 {
+0%   { 
+ transform: translateX(100%); 		
+ }
+ 100% { 
+ transform: translateX(0%); 
+ }
+}
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            width: 225px;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 13px 14px;
+            text-decoration: none;
+            display: block;
+        }
+
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdownbutton {
+            background-color: #4CBF48;
+            color: white;
+            padding: 15px;
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+        }
+#AboutTheGameDiv1
+{
+    background: linear-gradient(#6d6d6d , white);
+    margin-top: 10px;
+    height: 220px;
+}
+
+#AboutTheGameDiv2
+{
+    background: linear-gradient(#6d6d6d , white);
+    margin-top: 10px;
+    height: 350px;
+
+}
+.AboutTheGameMainDiv
+{
+    width:80%;
 }

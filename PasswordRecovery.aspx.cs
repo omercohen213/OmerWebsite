@@ -8,15 +8,14 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.OleDb;
 
-public partial class Login : System.Web.UI.Page
+public partial class PasswordRecovery : System.Web.UI.Page
 {
-
+    public string email = "";
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Request.Form["submit"] != null)
         {
             string email = Request.Form["email"];
-            string pass = Request.Form["pass"];
             // connectionString בניית
             String path = Server.MapPath(@"App_Data\Database.mdb"); //שם הקובץ
             string connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + path;
@@ -28,7 +27,7 @@ public partial class Login : System.Web.UI.Page
             OleDbCommand cmd = new OleDbCommand();
             cmd.Connection = conn;
             //  בתוך אוביקט הפעולה  select הכנת פקודת
-            cmd.CommandText = String.Format("SELECT * FROM users WHERE Email='{0}' AND Pass='{1}';", email, pass);
+            cmd.CommandText = String.Format("SELECT * FROM users WHERE Email='{0}';", email);
             //cmd.CommandText = "SELECT * FROM users WHERE email = '" + email + "'";
 
             // שליפת הנתונים לתוך אוביקט טבלה
@@ -38,18 +37,7 @@ public partial class Login : System.Web.UI.Page
             if (dt.Rows.Count != 0)
             {
                 Session["email"] = dt.Rows[0]["email"];
-                if ((bool)(dt.Rows[0]["isAdmin"]))
-                    Session["user"] = "Admin";
-                else
-                {
-                    Session["user"] = (string)dt.Rows[0]["firstName"] + " " + (string)dt.Rows[0]["lastName"];
-                }
-                    Response.Redirect("Default.aspx");//משתמש יועבר לדף ראשי
-
-                
-            }   
-                
             }
         }
-
     }
+}
