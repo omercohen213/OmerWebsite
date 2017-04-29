@@ -66,7 +66,7 @@ fieldset{
     width:11%;
     background-color: gray; 
     height:100%;
-    position:fixed;
+    
 } 
  
 .sidemenu ul {
@@ -139,6 +139,22 @@ url {
     margin-top:5%;
     width:35%;
     font-size:20px;
+}
+.div1-WithMarginBottom
+{
+    background: linear-gradient(rgba(109, 109, 109,0.5) , rgba(255, 255, 255, 0.5));
+    margin-top:5%;
+    width:35%;
+    font-size:20px;
+    margin-bottom:15px;
+}
+.div1-WithMarginTop
+{
+   background: linear-gradient(rgba(109, 109, 109,0.5) , rgba(255, 255, 255, 0.5));
+   margin-top:5%;
+   width:35%;
+   font-size:20px; 
+   margin-top:30px;
 }
 .div2
 {
@@ -275,4 +291,11 @@ url {
     background: linear-gradient(rgba(109, 109, 109,0.5) , rgba(255, 255, 255, 0.5));
     width:35%;
     font-size:20px;   
+}
+
+.NormalDiv
+{
+    background: linear-gradient(rgba(109, 109, 109,0.5) , rgba(255, 255, 255, 0.5));
+    width:80%;
+    font-size:20px;
 }

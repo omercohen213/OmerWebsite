@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <center>
-<div class="div1" style="margin-top:30px">Online Gameplay</div>
+<div class="div1">Online Gameplay</div>
 <div class="OnlineDiv" >
 <span style="font-size:21px"> play lets players go head to head against other players around the world. When partying with a friend(s), it will always assign you to the same team. 
 If a player leaves early,
@@ -20,7 +20,7 @@ Players in a party will always be on the same team when finding a match.
 </span>
 </div>
 
-<div class="div1" style="margin-top:30px">Pages in category "Online Gameplay"</div>
+<div class="div1-WithMarginTop">Pages in category "Online Gameplay"</div>
 
 <div class="OnlineDiv">
 <center><span style="font-size:30px">Press on each image for more information:</span></center>
