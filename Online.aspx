@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <center>
 <div class="div1" style="margin-top:30px">Online Gameplay</div>
-<div id="OnlineDiv1" >
+<div class="OnlineDiv" >
 <span style="font-size:21px"> play lets players go head to head against other players around the world. When partying with a friend(s), it will always assign you to the same team. 
 If a player leaves early,
 an AI will fill their place until a new player is found to take their place; 
@@ -22,7 +22,7 @@ Players in a party will always be on the same team when finding a match.
 
 <div class="div1" style="margin-top:30px">Pages in category "Online Gameplay"</div>
 
-<div id="OnlineDiv2">
+<div class="OnlineDiv">
 <center><span style="font-size:30px">Press on each image for more information:</span></center>
     <table>
         <tr>

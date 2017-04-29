@@ -1,5 +1,7 @@
 ﻿*{
  margin:0;
+ font-family:Arial;
+ font-weight:bold;
  padding:0;
 }
 
@@ -9,7 +11,7 @@ form {
 }
 
 fieldset{
-  background: linear-gradient(#6d6d6d , white);
+  background: linear-gradient(rgba(109, 109, 109,0.5) , rgba(255, 255, 255, 0.5));
 }
 
 #fieldset1 /*(Login)*/ {   
@@ -38,7 +40,7 @@ fieldset{
 }
  
  .btn {
-  background: linear-gradient(#6d6d6d , white); 
+  background: linear-gradient(rgba(109, 109, 109,0.5) , rgba(255, 255, 255, 0.5)); 
   border: 0;
   color:Black;
   cursor: pointer;
@@ -127,16 +129,23 @@ url {
 }
 #div1
 {
-    background: linear-gradient(#6d6d6d , white);
+    background: linear-gradient(rgba(109, 109, 109,0.5) , rgba(255, 255, 255, 0.5));
     margin-top:15px;
     width:35%;
 }
     
 .div1 /*(Register,Login,AboutTheGame (and its sub menu))*/ {
-    background: linear-gradient(#6d6d6d , white);
+    background: linear-gradient(rgba(109, 109, 109,0.5) , rgba(255, 255, 255, 0.5));
     margin-top:5%;
     width:35%;
     font-size:20px;
+}
+.div2
+{
+    background: linear-gradient(rgba(109, 109, 109,0.5) , rgba(255, 255, 255, 0.5));
+    width:35%;
+    font-size:20px;
+    margin-top:30px
 }
 
 .images { 
@@ -156,78 +165,30 @@ url {
 #td1 /*(Register)*/ {
     vertical-align:top;  
 }
-#CompetetiveDiv1
+
+.CompetetiveDiv
 {
-    background: linear-gradient(#6d6d6d , white);
+    background: linear-gradient(rgba(109, 109, 109,0.5) , rgba(255, 255, 255, 0.5));
     margin-top: 10px;
-    height: 50px;
-}
-#CompetetiveDiv2
-{
-    background: linear-gradient(#6d6d6d , white);
-    margin-top: 10px;
-    height: 110px;
-}
-#CompetetiveDiv3
-{
-    background: linear-gradient(#6d6d6d , white);
-    margin-top: 10px;
-    height: 30px;
-}
-#CompetetiveDiv4
-{
-    background: linear-gradient(#6d6d6d , white);
-    margin-top: 10px;
-    height: 50px;
-}
-#CompetetiveDiv5
-{
-    background: linear-gradient(#6d6d6d , white);
-    margin-top: 10px;
-    height: 50px;
-}
-#CompetetiveDiv6
-{
-    background: linear-gradient(#6d6d6d , white);
-    margin-top: 10px;
-    height: 55px;
-}
-#CompetetiveDiv7
-{
-    background: linear-gradient(#6d6d6d , white);
-    margin-top: 10px;
-    height: 550px;
-}
-#CompetetiveDiv8
-{
-    background: linear-gradient(#6d6d6d , white);
-    margin-top: 10px;
-    height: 60px;
+    height:auto;
 }
 
-#OnlineDiv1
+
+.OnlineDiv
 {
-    background: linear-gradient(#6d6d6d , white);
+    background: linear-gradient(rgba(109, 109, 109,0.5) , rgba(255, 255, 255, 0.5));
     margin-top: 10px;
-    height: 200px;
-    width:80%;
-    margin-left:100px;
-}
-#OnlineDiv2
-{
-    background: linear-gradient(#6d6d6d , white);
-    margin-top: 10px;
-    height: 250px;
+    height: auto;
     width:80%;
     margin-left:100px;
 }
 #maindiv{
-    background: linear-gradient(#6d6d6d , white);
+    background: linear-gradient(rgba(109, 109, 109,0.5) , rgba(255, 255, 255, 0.5));
     margin-top: 10%;
     height: 45px;
 }
 .maindiv2{
-    background: linear-gradient(#6d6d6d , white);
+    background: linear-gradient(rgba(109, 109, 109,0.5) , rgba(255, 255, 255, 0.5));
     height: 45px;
 }
 
@@ -264,11 +225,11 @@ url {
  transform: translateX(0%); 
  }
 }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #333;
-            width: 225px;
+.dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #333;
+   width: 225px;
         }
         .dropdown-content a {
             color: black;
@@ -289,21 +250,15 @@ url {
             border: none;
             cursor: pointer;
         }
-#AboutTheGameDiv1
-{
-    background: linear-gradient(#6d6d6d , white);
-    margin-top: 10px;
-    height: 220px;
-}
 
-#AboutTheGameDiv2
-{
-    background: linear-gradient(#6d6d6d , white);
-    margin-top: 10px;
-    height: 350px;
-
-}
 .AboutTheGameMainDiv
 {
     width:80%;
+    height:auto;    
+}
+.AboutTheGameDiv
+{
+    height:auto;
+    background: linear-gradient(rgba(109, 109, 109,0.5) , rgba(255, 255, 255, 0.5));
+    margin-top: 10px;
 }
