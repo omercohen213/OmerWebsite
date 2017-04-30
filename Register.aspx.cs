@@ -31,7 +31,7 @@ public partial class Register : System.Web.UI.Page
             string Username = Request["username"];
             string password = Request["password"];
             string Email = Request["email"];
-
+            string PersonalInfo = Request["personalInfo"];
 
             // connectionString בניית
             String path = Server.MapPath(@"App_Data\Database.mdb"); //שם הקובץ
@@ -72,7 +72,7 @@ public partial class Register : System.Web.UI.Page
                 // הכנסת רשומה בודדת לתוך מסד הנתונים
                 string sql;
                 sql = "INSERT INTO users";
-                sql += "(Firstname, Lastname, Gender, Username, Pass, Email)";
+                sql += "(Firstname, Lastname, Gender, Username, Pass, Email, PersonalInfo)";
                 sql += "VALUES (";
                 sql += "'" + Firstname + "'";
                 sql += ",'" + Lastname + "'";
@@ -80,6 +80,7 @@ public partial class Register : System.Web.UI.Page
                 sql += ",'" + Username + "'";
                 sql += ",'" + password + "'";
                 sql += ",'" + Email + "'";
+                sql += ",'" + PersonalInfo + "'";
                 sql += ")";
 
 

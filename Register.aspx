@@ -230,7 +230,7 @@
             </tr>
             <tr>
                 <td>Username:</td>
-                <td><input type="text" id="username" name="username" size="10" maxlength="30"/><span class="span_error" id="name_error1" style="color:Red"> </span></td>
+                <td><input type="text" id="username" name="username" size="15" maxlength="15"/><span class="span_error" id="name_error1" style="color:Red"> </span></td>
             </tr>
             <tr>
                 <td>Password:</td>
@@ -239,6 +239,18 @@
             <tr>
                 <td>Email:</td>
                 <td><input type="text" name="email" id="email" size="30" maxlength="30"/><span class="span_error" id="email_error" style="color:Red"> </span></td>
+            </tr>
+            <tr> 
+                <td>Security Question:</td>              
+                <td>
+                    <select>
+                        <option>What was the name of your first teacher:</option>
+                        <option>What was the name of your first dog:</option>
+                        <option>What was the name of your elementary school?</option>
+                        <option>In what city or town does your nearest sibling live?</option>
+                    </select>
+                </td>
+                <td><input type="text" name="personalInfo" id="personalInfo" size="20" maxlength="20" /><span class="span_error" id="personalInfo_error" style="color:Red"> </span></td>
             </tr>
             <tr>
                 <td><input type="submit" class="btn" value="Submit"/></td>
