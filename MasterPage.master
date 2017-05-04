@@ -165,7 +165,10 @@
                 eror.innerHTML = "No checkbox selected";
             else eror.innerHTML = "";
         }
+
+        document.title = "Rocket League";
     </script>
+     <link rel="shortcut icon" type="image/png" href="Images/RocketLeagueIcon.jpg" />
     <link rel="Stylesheet" type="text/css" href="css/StyleSheet.css" />
     <asp:ContentPlaceHolder id="head" runat="server">   
     </asp:ContentPlaceHolder>

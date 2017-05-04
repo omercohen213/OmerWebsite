@@ -10,6 +10,7 @@ using System.Data.OleDb;
 
 public partial class ForgotPassword : System.Web.UI.Page
 {
+    public string personalInfo = "";
     public string pass="";
     public string error = "";
     protected void Page_Load(object sender, EventArgs e)
@@ -36,8 +37,14 @@ public partial class ForgotPassword : System.Web.UI.Page
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             da.Fill(dt);
             if (dt.Rows.Count != 0)
+            {
                 pass = dt.Rows[0]["pass"].ToString();
+                personalInfo = dt.Rows[0]["personalInfo"].ToString();
+                if (Session["personalInfo"] == dt.Rows[0]["personalInfo"])
+                    Session["isTruePersonalInfo"] = true;
+            }
             else error = "  No email found.";
+            
         }
     }
 }

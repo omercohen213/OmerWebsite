@@ -5,11 +5,23 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 <center>
 <form id="form1" runat="server" dir="ltr">
-    <fieldset id="fieldset1">
-        <table>       
+    <fieldset id="ForgotPasswordDiv" >
+        <table >       
              <tr>
-                <td>Email:
-                <input type="text" placeholder="Enter email address" id="email" name="email"/><%=pass %><span class="span_error" id="email_error"></span><%=error %></td>
+                <td>Email:</td>
+                <td><input type="text" placeholder="Enter email address" id="email" name="email" style="display:table-cell"/><span class="span_error" id="email_error" style="color:Red"></span><%=error %></td>
+             </tr>
+             <tr>
+                <td>Security Question:</td>
+                <td>
+                    <select>
+                        <option>What was the name of your first teacher:</option>
+                        <option>What was the name of your first dog:</option>
+                        <option>What was the name of your elementary school?</option>
+                        <option>In what city or town does your nearest sibling live?</option>
+                    </select>
+                </td>
+                <td><input type="text" name="personalInfo" id="personalInfo" size="20" maxlength="20"  style="display:table-cell"/><span class="span_error" style="color:Red" ></span></td>
              </tr>
              <tr>
                 <td><input class="btn" type="submit" value="Recover password" name="submit"/></td>                  

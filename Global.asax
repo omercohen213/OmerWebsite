@@ -31,8 +31,8 @@
         Application.Lock();
         Application["userCounter"] = (int)(Application["userCounter"]) + 1;
         Application.UnLock();
-        
-        
+
+        Session["isTruePersonalInfo"] = false;
         Session["surveyreset"] = false;
         Session["email"] = null;
         Session["user"] = null;
